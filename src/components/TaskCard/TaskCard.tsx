@@ -13,12 +13,9 @@ const TaskCard: React.FC<TaskCardProps> = ({ todo }) => {
   const [isCompleted, setIsCompleted] = useState(todo.is_completed);
   const { deleteTask } = useTodoTasks();
 
-   ('todo', todo)
-
   const toggleCompletion = () => {
     setIsCompleted((prev) => !prev);
   };
-
 
   const handleDelete = (id: string) => {
     deleteTask(id, {
@@ -27,8 +24,6 @@ const TaskCard: React.FC<TaskCardProps> = ({ todo }) => {
       },
     });
   };
-
-
 
   return (
     <div className="relative p-4 border border-gray-300 dark:border-gray-700 rounded-lg shadow bg-white dark:bg-gray-900 transition-colors duration-500">
@@ -47,7 +42,9 @@ const TaskCard: React.FC<TaskCardProps> = ({ todo }) => {
             <span className="font-medium text-red-500">(Delayed)</span>
           )}
         </div>
-
+        <p className="text-gray-700 dark:text-gray-300 mb-2">
+          Priority: <b>{todo.priority}</b>
+        </p>
         <p
           className={`text-sm font-medium mb-2 ${
             isCompleted
@@ -68,8 +65,6 @@ const TaskCard: React.FC<TaskCardProps> = ({ todo }) => {
           todoDetails={todo}
         />
       </div>
-
-      
     </div>
   );
 };

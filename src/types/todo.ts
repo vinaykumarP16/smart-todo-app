@@ -7,6 +7,7 @@ export interface TodoItem {
   is_completed: boolean;
   createdAt: string;
   updatedAt?: string;
+  priority:boolean;
 }
 
 export interface TodoItemAddUpdate{
