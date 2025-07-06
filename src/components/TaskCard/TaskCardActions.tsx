@@ -26,11 +26,8 @@ const TaskCardActions: React.FC<TaskCardActionsProps> = ({
   const [deadlineDate, setDeadlineDate] = useState(todoDetails?.deadline);
   const { updateTask } = useTodoTasks();
 
-
   const handleClose = () => {
-    setTitle("");
-    setDescription("");
-    setDeadlineDate("");
+   console.log('closed');
   };
 
   const handleUpdateTask = () => {

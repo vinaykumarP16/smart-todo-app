@@ -32,13 +32,11 @@ export default function TaskList() {
       .length,
   };
 
-  // const handleOpen = () => setOpen(true);
 
   const handleClose = () => {
     setTitle("");
     setDescription("");
     setDeadlineDate("");
-    // setOpen(false);
   };
 
   const handleAddTask = () => {
