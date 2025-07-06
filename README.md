@@ -90,13 +90,14 @@ const sortedTasks = tasks.sort((a, b) => {
 
 1. Clone the repository
 2. Install dependencies
-3. Set up your API endpoints
+3. Set up your Env keys
 4. Run the development server
 
 ## 🛠️ Technologies Used
 
 * React
 * React Query (for API state management)
+* Supabase - Backend-as-a-Service (BaaS)
 * TypeScript
 * Tailwind CSS
 * ShadCn
