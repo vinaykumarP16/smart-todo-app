@@ -99,15 +99,11 @@ const sortedTasks = tasks.sort((a, b) => {
 * React Query (for API state management)
 * TypeScript
 * Tailwind CSS
+* ShadCn
+* zustand
+* React toastify
+
 
 ## ✅ Summary
 
 This feature not only improves **task management efficiency** but also makes the app more engaging by providing actionable suggestions based on estimated effort. The combination of priority and time tracking makes this Todo app **stand out from standard task managers.**
-
-## 📄 License
-
-[Add your license here]
-
-## 🤝 Contributing
-
-[Add contribution guidelines here]
