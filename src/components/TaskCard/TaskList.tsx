@@ -8,6 +8,7 @@ import CommonDialog from "../Dialog/Dialog";
 import { Button } from "../ui/button";
 import TaskCard from "./TaskCard";
 import TaskForm from "./TaskForm";
+import FilterButton from "./FilterButton";
 
 type TaskFilter = "all" | "completed" | "pending" | "overdue" | "upcoming";
 
@@ -85,6 +86,14 @@ export default function TaskList() {
     }
   });
 
+  const filterColors: Record<TaskFilter, string> = {
+    all: "blue",
+    completed: "green",
+    pending: "yellow",
+    overdue: "red",
+    upcoming: "purple",
+  };
+
   return (
     <div className="p-4">
       <div className="flex justify-between items-center mb-4">
@@ -98,22 +107,20 @@ export default function TaskList() {
               "upcoming",
             ] as TaskFilter[]
           ).map((filterType) => (
-            <Button
+            <FilterButton
               key={filterType}
-              color={
-                filterType === "completed"
-                  ? "success"
-                  : filterType === "pending"
-                  ? "warning"
-                  : filterType === "overdue"
-                  ? "error"
-                  : "primary"
+              label={
+                filterType === "all"
+                  ? "All"
+                  : filterType.charAt(0).toUpperCase() + filterType.slice(1)
               }
+              count={
+                filterType === "all" ? tasks.length : taskCounts[filterType]
+              }
+              isActive={filter === filterType}
+              color={filterColors[filterType]}
               onClick={() => setFilter(filterType)}
-            >
-              {filterType === "all" ? "All" : filterType}:{" "}
-              {filterType === "all" ? tasks.length : taskCounts[filterType]}
-            </Button>
+            />
           ))}
         </div>
 
