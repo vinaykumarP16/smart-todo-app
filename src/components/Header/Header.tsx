@@ -1,9 +1,9 @@
 import React from "react";
-import useThemeStore from "../store/themeStore";
 import { CiDark } from "react-icons/ci";
 import { CiLight } from "react-icons/ci";
-import { Button } from "./ui/button";
-import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
+import useThemeStore from "../../store/themeStore";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import { Button } from "../ui/button";
 
 const Header: React.FC = () => {
   const { theme, toggleTheme } = useThemeStore();

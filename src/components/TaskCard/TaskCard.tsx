@@ -13,7 +13,7 @@ const TaskCard: React.FC<TaskCardProps> = ({ todo }) => {
   const [isCompleted, setIsCompleted] = useState(todo.is_completed);
   const { deleteTask } = useTodoTasks();
 
-  console.log('todo', todo)
+   ('todo', todo)
 
   const toggleCompletion = () => {
     setIsCompleted((prev) => !prev);

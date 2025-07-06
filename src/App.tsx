@@ -1,10 +1,9 @@
-// src/App.tsx
 import React, { useEffect } from "react";
 import useThemeStore from "./store/themeStore";
-import Header from "./components/Header";
 import TaskList from "./components/TaskCard/TaskList";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ToastContainer } from "react-toastify";
+import Header from "./components/Header/Header";
 
 const queryClient = new QueryClient();
 
