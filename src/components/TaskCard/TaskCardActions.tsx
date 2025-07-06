@@ -27,7 +27,7 @@ const TaskCardActions: React.FC<TaskCardActionsProps> = ({
   const { updateTask } = useTodoTasks();
 
   const handleClose = () => {
-   console.log('closed');
+    console.log('closed');
   };
 
   const handleUpdateTask = () => {
@@ -61,7 +61,7 @@ const TaskCardActions: React.FC<TaskCardActionsProps> = ({
         content={
           <TaskForm
             title={title}
-            description={description} 
+            description={description}
             deadline={deadlineDate}
             setTitle={setTitle}
             setDescription={setDescription}
@@ -72,12 +72,17 @@ const TaskCardActions: React.FC<TaskCardActionsProps> = ({
         agreeText="Update Task"
         disagreeText="Cancel"
       >
-        <Button>
+        <Button
+          className="bg-blue-500 hover:bg-blue-600 text-white dark:bg-blue-400 dark:hover:bg-blue-500"
+        >
           <MdEdit />
         </Button>
       </CommonDialog>
 
-      <Button className="ml-2" color="primary" onClick={() => taskDelete(taskId)}>
+      <Button
+        className="ml-2 bg-red-500 hover:bg-red-600 text-white dark:bg-red-400 dark:hover:bg-red-500"
+        onClick={() => taskDelete(taskId)}
+      >
         <MdDelete />
       </Button>
     </>
